@@ -1,77 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* FONTS */
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 /* GLOBAL */
 * {
     margin: 0;
@@ -83,7 +10,12 @@ body {
     height: 100vh;
     background-color: rgb(23, 23, 23);
     color: white;
-    /* font-family: Roboto Condensed,Roboto fallback,sans-serif; */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 a{
@@ -194,9 +126,9 @@ main.container{
     flex-direction: column;
     margin-bottom: 25px;
 }
-.mainHeading{
+/* .mainHeading{
     font-size: 2vw;
-}
+} */
 .mainArticlePic{
     height: 500px;
 }
@@ -214,33 +146,25 @@ main.container{
     font-size: 1.2vw;
 }
 
-/* table, tr, td{
-    border: 1px solid red;
-} */
-
-td{
-    width: 33.33%;
-    padding: 5px 5px 5px 0;
+.sub-heading{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 25px 0px;
 }
+.horLine{
+    background-color: #2fff2f;
+    width: 100%;
+    height: 1px;
+}
+
 .articlePic img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
-}
-.LatestNews{
-    font-size: 1.5vw;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 25px;
-}
-.horLine{
-    width: 88%;
-    height: 23px;
-    border: none;
-    border-bottom: 2px solid #2fff2f;
-    /* background-color: white; */
-    /* margin: 25px 0 0 0; */
 }
 .ques{
     margin-top: 5%;
@@ -278,7 +202,6 @@ td{
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
-
 }
 .post{
     display: flex;
@@ -297,7 +220,7 @@ td{
     object-fit: cover;
 }
 .postContent{
-    padding: 20px;
+    padding: 5%;
 }
 .Author{
     margin-top: 5px;
@@ -309,17 +232,26 @@ footer{
     padding: 20px 0;
     text-align: center;
 }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
 /* Media Queries */
 @media (max-width: 768px) {
     main{
         flex-direction: column;
     }
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
     .Left, .Right{
         width: 100%;
     }
-    .mainHeading{
+    /* .mainHeading{
         font-size: 5vw;
-    }
+    } */
     .publishingDate{
         font-size: 2vw;
     }
@@ -359,7 +291,9 @@ footer{
     nav {
         font-size: calc(16px + 0.5vw); /* Further adjusted font size for very small screens */
     }
-
+    .grid-container{
+        grid-template-columns: auto;
+    }
     .searchBar {
         width: 100%; /* Make search bar full width */
         margin-top: 5px; /* Add some spacing */

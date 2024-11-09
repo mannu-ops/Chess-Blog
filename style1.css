@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "width" 100;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* Custom CSS */
+.green {
+    color: #2fff2f;
+}
+.container {
+    padding: 0 5%; /* percentage for responsive padding */
+}
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid red; */  
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(43, 43, 43);
+    /* text-transform: uppercase; */
+    /* position: fixed; */
+    /* top: 0; */
+}
+.title {
+    margin-bottom: 15px;
+    padding: 15px 0;
+}
+.logo {
+    /*border: 1px solid red; */  
+    font-size: 1.4vw; /* Adjusted font size */
+    text-align: center;
+}
+.tagLine {
+    /*border: 1px solid red; */  
+    text-align: center;
+    font-size: 1.2vw; /* Adjusted font size */
+    color: #626e73;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*border: 1px solid red; */  
+    font-size: 1.vw; /* Adjusted font size */
+}
+.searchBar {
+    /*border: 1px solid red; */  
+    padding: 10px 15px;
+}
+.navItems {
+    /*border: 1px solid red; */  
+    margin-left: 2%; /* Use percentage for responsive margin */
+}
+#search {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.navbar ul > li {
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul > li > a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    /*border: 1px solid red; */ 
+}
+.navItems a:hover {
+    background-color: rgb(203, 52, 52);
+}
+#active {
+    background-color: rgb(203, 52, 52);
+}
+
+main{
+    /* border: 1px solid black; */
+    /* margin-top: 550px; */
+    width: 100%;
+    display: flex;
+}
+.left-section{
+    width: 70%;
+    height: auto;
+    /* border: 1px solid rgb(16, 198, 28); */
+    padding: 2% 1%;
+}
+.right-section{
+    width: 30%;
+    height: auto;
+    padding: 2% 1%;
+    /* border: 1px solid red; */
+}
+.main-post{
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-direction: column;
+}
+.main-post img, .post-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post-image img{
+    border-radius: 5px;
+}
+.author, .publish-date{
+    font-size: 10px;
+    color: grey;
+    font-weight: bold;
+    padding: 2px 0px;
+}
+.left-section a{
+    color: rgb(203, 52, 52);;
+    text-decoration: underline;
+    float: right;
+}
+.headings{
+    font-size: 20px;
+    border-bottom: 2px solid rgb(203, 52, 52);;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* border: 1px solid red; */
+    grid-column-gap: 20px;
+}
+.grid-item{
+    padding: 20px 0;
+}
+.grid-item .summary{
+    height: 80px;
+    overflow: hidden;
+}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(203, 52, 52);
+    margin-top: 30px;
+}
+.pagination .box{
+    text-align: center;
+    width: 50px;
+}
+.pagination .box:hover{
+cursor: pointer;
+}
+.pagination .next, .pagination .prev{
+text-decoration: underline;
+}
+.pagination .next:hover, .pagination .prev:hover{
+    cursor: pointer;
+}
+.headings{
+    margin-bottom: 15px;
+}
+.rounds{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37 37 37);
+    padding: 5px 0 15px 20px;
+    height: 400px;
+    overflow-y: auto;
+}
+.round{
+    display: flex;
+    flex-direction: column;
+}
+.round h4{
+    margin: 10px 0 0 0;
+    color: rgb(203, 52, 52);
+}
+.round h5{
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 4px 0;
+}
+.round h5:hover{
+    cursor: pointer;
+}
+.round p{
+    font-size: 13px;
+}
+.trending{
+    margin-top: 20px;
+}
+.trends{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    height: 440px;
+    /* padding: 5px 0 0 0; */
+}
+.trend{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    /* border: 1px solid red; */
+}
+.trends .number{
+    font-size: 3vw;
+    padding: 0 15px 0 0;
+    border-right: 1px solid grey;
+}
+.trends .post{
+    align-self: center;
+    padding: 0 15px 0 15px;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+    .left-section, .right-section{
+        width: 100%;
+    }
+    /* .mainHeading{
+        font-size: 5vw;
+    } */
+    .publishingDate{
+        font-size: 2vw;
+    }
+    .summary{
+        font-size: 3vw;
+    }
+
+    .container {
+        padding: 0 20px; /* Less padding on smaller screens */
+    }
+    .title{
+        margin-bottom: 0;
+    }
+    .searchBar{
+        text-align: center;
+    }
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .navItems {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+
+    .logo,
+    .tagLine,
+    nav {
+        font-size: 2.5vw; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo,
+    .tagLine,
+    nav {
+        font-size: calc(16px + 0.5vw); /* Further adjusted font size for very small screens */
+    }
+    .grid-container{
+        grid-template-columns: auto;
+    }
+    .searchBar {
+        width: 100%; /* Make search bar full width */
+        margin-top: 5px; /* Add some spacing */
+    }
+}
+
+@media (max-width: 360px) {
+    .logo,
+    .tagLine,
+    nav {
+        font-size: calc(16px + 0.5vw); /* Further adjusted font size for very small screens */
+    }
+    .navItems{
+        width: 100%;
+    }
+    .navItems ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .searchBar {
+        width: 100%; /* Make search bar full width */
+        margin-top: 5px; /* Add some spacing */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    border-top: 1px solid rgb(43, 43, 43);
+    text-align: center;
+    padding: 20px 0;
+}
